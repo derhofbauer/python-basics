@@ -14,10 +14,10 @@ canvas_height = 15 * virtual_pixel
 
 canvas = tk.Canvas(
     window,
-    width = canvas_width,
-    height = canvas_height
+    width=canvas_width,
+    height=canvas_height
 )
-canvas.pack() # erstelltes Canvas an window dran haengen
+canvas.pack()  # erstelltes Canvas an window dran haengen
 
 # Spiel Arena definieren
 arena_padding = 1 * virtual_pixel
@@ -53,7 +53,7 @@ while crash is False:
         m = virtual_pixel
         color = "#bada55"
 
-        if pixel == head: # Kopf der Schlange anders einfaerben
+        if pixel == head:  # Kopf der Schlange anders einfaerben
             color = "#6F8233"
 
         rectangle = canvas.create_rectangle(
@@ -81,9 +81,9 @@ while crash is False:
         ]
         snake.insert(0, new_head)
         snake.pop()
-    
+
     # 800 Millisekunden warten, damit die Snake eine
-    # smoothe Bewegung macht
+    # "smoothe" Bewegung macht
     time.sleep(0.8)
 
 # Ende while-Schleife
